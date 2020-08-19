@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+@media (max-width: 920px) {
+  .row {
+    flex-wrap: wrap-reverse;
+  }
+  .row.no {
+    flex-wrap: wrap;
+  }
+}

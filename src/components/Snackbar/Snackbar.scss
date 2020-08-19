@@ -1,0 +1,37 @@
+@import "../Theme/variables";
+
+.snackbar {
+  position: fixed;
+  bottom: 40px;
+  left: 25px;
+  padding: 12px 16px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  color: $whiteColor;
+  border-radius: 4px;
+  z-index: 1110;
+  background: #4caf50;
+  font-weight: 500;
+  transition: 0.5s ease;
+  transform: translateY(200%);
+
+  // opening
+  &.open {
+    transform: translateY(0);
+  }
+
+  // close
+  &__close {
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 10px;
+    line-height: 1px;
+    transition: 0.5s ease;
+
+    // hover
+    &:hover {
+      cursor: pointer;
+      color: $secondary;
+    }
+  }
+}

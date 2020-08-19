@@ -1,0 +1,34 @@
+@import "../../components/Theme/variables";
+
+.contact {
+  padding-top: 50px;
+  color: $text;
+  font-family: montserrat, sans-serif;
+  position: relative;
+
+  // name
+  &__name {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  // wrapper
+  &__wrapper {
+    margin-top: 40px;
+  }
+
+  // image
+  &__image > svg {
+    width: 100%;
+  }
+}
+
+// Media
+@media (max-width: 920px) {
+  .contact {
+    &__image > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Snackbar /> should render 1`] = `
+<div
+  className="snackbar undefined"
+>
+  <span
+    className="snackbar__close"
+  >
+    <IoMdCloseCircleOutline />
+  </span>
+</div>
+`;

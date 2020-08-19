@@ -1,0 +1,88 @@
+@import "../Theme/variables";
+
+.footer {
+  margin-top: 100px;
+  overflow: hidden;
+  font-family: montserrat, sans-serif;
+
+  // inner
+  &__outer {
+    background: $blackColor;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0px 0;
+  }
+
+  // wraper
+  &__wrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 25px;
+  }
+
+  // Cols
+  &__cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // text
+  &__details {
+    color: $whiteColor;
+    font-family: nunito, sans-serif;
+  }
+
+  &__heart > svg {
+    color: $primary;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+
+  // Links
+  &__links > a {
+    text-decoration: none;
+    color: $whiteColor;
+    padding: 0 10px;
+    font-size: 20px;
+    transition: 0.5s ease;
+
+    // hover over
+    &:hover {
+        color: $secondary;
+    }
+
+    &:nth-last-child(1) {
+      padding-right: 0;
+    }
+  }
+}
+
+// Media
+
+@media (max-width: 550px) {
+  .footer {
+    text-align: center;
+    // cols
+    &__cols {
+      flex-direction: column;
+    }
+
+    // details
+    &__details {
+      & h2 {
+        font-size: 22px;
+      }
+
+      &p {
+        font-size: 16px;
+      }
+    }
+
+    // links
+    &__links {
+      margin-top: 20px;
+    }
+  }
+}
