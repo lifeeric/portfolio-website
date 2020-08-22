@@ -19,7 +19,7 @@
 ## [](https://github.com/lifeeric/portfolio-using-gatsby#setup)Setup
 
 1.  `gatsby new portfolio-website https://github.com/lifeeric/portfolio-website`
-2.  Start developing.
+2.  Start developing server.
 Navigate into your new site’s directory and start it up.
 ```shell
 cd portfolio-website/
