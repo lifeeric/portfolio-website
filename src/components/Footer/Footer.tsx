@@ -17,14 +17,23 @@ export const Footer: React.FC = () => (
           <div className="footer__details">
             <h1>Eric Roth.</h1>
             <p className="footer__heart">
-              © 2020 | Build with <AiFillHeart /> by me
+              © 2020 | Build with <AiFillHeart /> by me | source on{" "}
+              <a
+                target="_blank"
+                href="https://github.com/lifeeric/portfolio-website"
+              >
+                Github
+              </a>
             </p>
           </div>
           <div className="footer__links">
             <a target="_blank" href="https://github.com/lifeeric">
               <AiFillGithub />
             </a>{" "}
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://stackoverflow.com/users/8108684/code?tab=profile"
+            >
               <RiStackOverflowLine />
             </a>
             <a target="_blank" href="https://twitter.com/ISleepAndCode">
@@ -33,7 +42,10 @@ export const Footer: React.FC = () => (
             <a target="_blank" href="https://dev.to/hasone">
               <FaDev />
             </a>
-            <a target="_blank" href="https://www.codegrepper.com/app/profile.php?id=41157">
+            <a
+              target="_blank"
+              href="https://www.codegrepper.com/app/profile.php?id=41157"
+            >
               <FiCodepen />
             </a>
           </div>
