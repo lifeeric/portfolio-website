@@ -1,0 +1,54 @@
+@import "../../components/Theme/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: $whiteColor;
+  transition: 0.5s ease;
+  box-shadow: 0px 2px 4px rgba(34, 36, 43, 0.16);
+
+  &__center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__innerWidth {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 15px 0;
+  }
+
+  &__logo {
+    font-family: nunito, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    width: 70px;
+
+    & > a {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px 0px;
+
+    // wrapper
+    &__wrapper {
+      padding: 0;
+    }
+  }
+}

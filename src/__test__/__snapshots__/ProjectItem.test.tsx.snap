@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> testing should render well 1`] = `
+<div
+  className="project__box"
+>
+  <Component
+    image="jpg"
+  />
+  <div
+    className="project__body"
+  >
+    <p
+      className="project__header"
+    >
+      me
+    </p>
+    <div
+      className="project__source"
+    >
+      <a
+        href="@lifeeric"
+      >
+        <FaGithub />
+      </a>
+      <a
+        href="empty"
+      >
+        <FiExternalLink />
+      </a>
+    </div>
+  </div>
+</div>
+`;

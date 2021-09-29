@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`First Test should render two <NavigationItem /> element if not authenicated 1`] = `
+<Fragment>
+  <div
+    className="toggle"
+  >
+    <div
+      className="toggle_right"
+      onClick={[Function]}
+    >
+      <div
+        className="toggle__dots"
+      >
+        <div
+          className="toggle__dot--1"
+        />
+        <div
+          className="toggle__dot--2"
+        />
+        <div
+          className="toggle__dot--3"
+        />
+      </div>
+    </div>
+  </div>
+  <nav
+    className="navbar false"
+  >
+    <span
+      className="navbar__close"
+      onClick={[Function]}
+    />
+    <ul
+      className="navbar__list"
+    >
+      <Component
+        key="home"
+        name="Me"
+        offset={-120}
+        onClick={[Function]}
+        to="home"
+      />
+      <Component
+        key="project"
+        name="Projects"
+        offset={-70}
+        onClick={[Function]}
+        to="project"
+      />
+      <Component
+        key="skill"
+        name="Skills"
+        offset={-70}
+        onClick={[Function]}
+        to="skill"
+      />
+      <Component
+        key="contact"
+        name="Contact"
+        offset={-70}
+        onClick={[Function]}
+        to="contact"
+      />
+    </ul>
+  </nav>
+</Fragment>
+`;

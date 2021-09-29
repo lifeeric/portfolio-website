@@ -1,0 +1,149 @@
+@import "../../components/Theme/variables";
+
+.navbar {
+  // Toggle
+  &__toggle {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 30px;
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: $blackColor;
+    transition: 1s ease;
+    border-bottom: 3px solid transparent;
+
+    // hover
+    &:hover {
+      color: $borderActive;
+    }
+
+    // last item
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item > .active {
+    border-bottom: 3px solid $borderActive;
+  }
+}
+
+// media
+
+@media (max-width: 600px) {
+  // Menu Icon
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    z-index: 100;
+
+    // when clicked on the button
+    &.showMenu {
+      transform: translateX(0);
+    }
+
+    // close icon
+    &__close {
+      width: 35px;
+      height: 5px;
+      position: absolute;
+      top: 30px;
+      right: 25px;
+      z-index: 20;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: $whiteColor;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    // ul
+    &__list {
+      margin: 50% auto;
+      width: 100%;
+      text-align: center;
+    }
+    // item
+    &__item {
+      display: block !important;
+      font-size: 24px;
+      margin-top: 15px;
+      margin-right: 0;
+      color: $whiteColor;
+
+      &--active {
+        border: none;
+        color: $borderActive;
+      }
+    }
+  }
+
+  // Menu clip path
+  .navbar {
+    transition: clip-path 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+      transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.8s;
+    background-color: #141414;
+    clip-path: circle(0% at 102% -12px);
+
+    &.showMenu {
+      transition: clip-path 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+        transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+      clip-path: circle(72%);
+    }
+  }
+
+  .toggle {
+    cursor: pointer;
+    &__right {
+      position: relative;
+    }
+
+    &__dots {
+      position: absolute;
+      top: 30px;
+      right: 25px;
+    }
+
+    // Dots
+    @for $var from 1 through 3 {
+      &__dot--#{$var} {
+        width: 33px - ($var * 3);
+        height: 3px;
+        background: $borderActive;
+        margin-top: 3px;
+        border-radius: 5px;
+        border-collapse: separate;
+      }
+    }
+  }
+}

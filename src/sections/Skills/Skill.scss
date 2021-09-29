@@ -1,0 +1,79 @@
+@import "../../components/Theme/variables";
+
+.skill {
+  padding-top: 50px;
+
+  // name , header
+  &__name {
+    color: $text;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 5px;
+  }
+
+  // inner, container
+  &__inner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+  }
+
+  // sets
+  &__sets {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // technology
+  &__technology {
+    font-size: 20px;
+    background: $secondary;
+    margin: 5px;
+    padding: 6px 12px;
+    color: $whiteColor;
+  }
+
+  // Image
+  &__sideimage > svg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill {
+    // inner
+    &__inner {
+      padding-top: 0;
+    }
+
+    // sets
+    &__sets {
+      margin-top: -40px;
+    }
+
+    // technology
+    &__technology {
+      font-size: 16px;
+    }
+
+    // image
+    &__sideimage {
+      margin-top: -50px;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .skill {
+    // sets
+    &__sets {
+      margin-top: -40px;
+    }
+
+    // image
+    &__sideimage {
+      margin-top: -50px;
+    }
+  }
+}

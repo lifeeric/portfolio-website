@@ -1,0 +1,141 @@
+@import "../../components/Theme/variables";
+
+.contact {
+  // form
+  &__form {
+    margin-top: 140px;
+  }
+
+  // email
+  &__customMail {
+    margin-left: 16px;
+  }
+
+  &__domain {
+    color: $secondary;
+  }
+
+  // input
+  &__input,
+  &__body,
+  &__action {
+    width: 420px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+
+    & > input,
+    & > textarea {
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 20px;
+      padding: 8px 15px;
+      color: $text;
+      outline: none;
+      border: 1px solid #bdbdbd;
+      border-radius: 25px;
+      background: #f2f9fd;
+    }
+  }
+
+  // textarea
+  &__textarea {
+    min-height: 150px;
+  }
+
+  // button
+  &__submit {
+    width: 120px;
+    padding: 6px 10px;
+    background: $secondary;
+    border: none;
+    color: $whiteColor;
+    font-size: 18px;
+    box-shadow: 2px 2px 10px rgba(0, 125, 254, 0.03),
+      3px 3px 10px rgba(0, 125, 254, 0.5);
+    transition: 0.5s ease;
+    border-radius: 25px;
+
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // process
+  &__process > svg {
+    animation: rotating 2s infinite;
+    color: $whiteColor;
+  }
+
+  // info
+  &__info {
+    margin-top: 20px;
+    padding: 10px 0;
+    border-radius: 4px;
+    color: $danger;
+    width: 100%;
+    animation: vibrate 1s;
+  }
+}
+
+// Media
+@media (max-width: 920px) {
+  .contact {
+    // form
+    &__form {
+      margin: 0 auto !important;
+      display: table;
+    }
+
+    // input
+    &__input,
+    &__body,
+    &__action {
+      max-width: 400px !important;
+      padding: 0;
+      margin-top: 20px !important;
+    }
+  }
+}
+
+// 600
+@media (max-width: 600px) {
+  .contact {
+    // input
+    &__input,
+    &__body,
+    &__action {
+      width: 100% !important;
+    }
+  }
+}
+
+// Animation
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vibrate {
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+hr.contact__line {
+  border: 0;
+  height: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
